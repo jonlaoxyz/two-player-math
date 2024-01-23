@@ -1,5 +1,3 @@
-require "byebug"
-
 class Player
   attr_reader :name, :lives
 
@@ -8,24 +6,18 @@ class Player
     @lives = initial_lives
   end
 
-  def answer_question(answer)
-    correct_answer = perform_calculation
+  def answer_question(answer, question)
+    correct_answer = question.correct_answer
     if answer.to_i == correct_answer
       DisplayGame.display_message("#{name}: Yes! You are correct.")
     else
-      DisplayGame.display_message("#{name}: Seriously? No!")
+      DisplayGame.display_message("#{name}: Seriously? No! The answer is: #{correct_answer}")
       lose_life
     end
   end
   
   def lose_life
     @lives -= 1
-  end
-
-  private
-
-  def perform_calculation
-    rand(1..20) + rand(1..20)
   end
 
 end

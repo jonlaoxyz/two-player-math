@@ -35,7 +35,7 @@ class Game
 
   def announce_winner
     winner = (player1.lives > player2.lives) ? player1 : player2
-    DisplayGame.display_message("#{winner.name} wins with a score of #{winner.livs}/3")
+    DisplayGame.display_message("#{winner.name} wins with a score of #{winner.lives}/3")
     DisplayGame.display_message("--- GAME OVER ---\nGoodbye!")
   end
 
