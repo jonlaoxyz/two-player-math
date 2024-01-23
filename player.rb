@@ -8,7 +8,6 @@ class Player
     @lives = initial_lives
   end
 
-  
   def answer_question(answer)
     correct_answer = perform_calculation
     if answer.to_i == correct_answer
@@ -19,7 +18,6 @@ class Player
     end
   end
   
-  byebug
   def lose_life
     @lives -= 1
   end
@@ -29,7 +27,6 @@ class Player
   def perform_calculation
     rand(1..20) + rand(1..20)
   end
-
-
+byebug
 end
 
