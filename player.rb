@@ -4,7 +4,7 @@ class Player
   attr_reader :name, :lives
 
   def initialize(name, initial_lives = 3)
-    @name = names
+    @name = name
     @lives = initial_lives
   end
 
@@ -27,6 +27,6 @@ class Player
   def perform_calculation
     rand(1..20) + rand(1..20)
   end
-byebug
+
 end
 

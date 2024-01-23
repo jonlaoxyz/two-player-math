@@ -21,7 +21,7 @@ class Game
     DisplayGame.display_message("--- NEW TURN ---")
     question = Question.new
     turn = Turn.new(current_player, question)
-    turn.execute_turn
+    turn.run_turn
     Life.new([player1, player2]).display_scores
   end
 
