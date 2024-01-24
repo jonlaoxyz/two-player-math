@@ -1,5 +1,3 @@
-require "byebug"
-
 class Game
   attr_reader :player1, :player2, :current_player
 
